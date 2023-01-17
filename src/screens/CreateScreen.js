@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TextInput, Button } from "react-native";
 import { HeaderTitle } from "react-navigation-stack";
 import { Context } from "../context/BlogContext";
 
-const CreateScreen = ({navigation}) => {
+const CreateScreen = ({ navigation }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -24,9 +24,14 @@ const CreateScreen = ({navigation}) => {
         value={content}
         onChangeText={(text) => setContent(text)}
       />
-      <Button title="Add Blog Post" onPress={() => {addBlogPost(title, content, () => {
-        navigation.navigate('Index')
-      })}} />
+      <Button
+        title="Add Blog Post"
+        onPress={() => {
+          addBlogPost(title, content, () => {
+            navigation.navigate("Index");
+          });
+        }}
+      />
     </View>
   );
 };

@@ -30,7 +30,7 @@ ShowScreen.navigationOptions = ({ navigation }) => {
             navigation.navigate("Edit", { id: navigation.getParam("id") });
           }}
         >
-          <MaterialIcons name="edit" size={35} color="black" />
+          <MaterialIcons name="edit" size={30} color="black" />
         </TouchableOpacity>
       );
     },
